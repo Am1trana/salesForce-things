@@ -1,0 +1,36 @@
+<template>
+        <!-- Header-->
+         <div class="slds-modal__header slds-text-heading_large">
+            Add Related Contact
+        </div>
+        <table>
+            <thead>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Email</td>
+                <td>Lead Source</td>
+            </thead>
+            <tbody>
+                <td>
+                    <lightning-input label="First Name" variant="label-hidden" placeholder="Enter Your First Name.."></lightning-input>                    
+                </td>
+                <td>
+                    <lightning-input label="Last Name" variant="label-hidden" placeholder="Enter Your Last Name.."></lightning-input>
+                </td>
+                <td>
+                    <lightning-input label="Email" variant="label-hidden" placeholder="Enter Your Email.."></lightning-input>
+                </td>
+                <td>
+                    <!-- for picklist valuen of Lead Source-->
+                     <lightning-combobox label="Lead Source" variant="label-hidden" placeholder="Select Lead Source" options= {picklistValues}></lightning-combobox>
+                </td>
+
+            </tbody>
+        </table>
+
+        <!--Footer-->
+        <div class="slds-modal__footer slds-align_absolute-center">
+            <lightning-button  label="ADD" variant="Brand"  onclick={saveRecord}></lightning-button>
+        </div>
+       
+</template>
